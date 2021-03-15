@@ -15,11 +15,11 @@ jobs:
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Insatll Jigsaw
-        uses: MilesChou/composer-action@master
+        uses: MilesChou/composer-action/7.4@master
         with:
 	    args:install
 
-      - name: Install Jigsaw
+      - name: Build Jigsaw
 	uses: docker://php:7.4
 	with:
 	    args:php vendor/bin/jigsaw build
